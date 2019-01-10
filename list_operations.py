@@ -41,7 +41,8 @@ def tail(input_list):
 
     """
 
-    return []
+    del input_list[0]
+    return input_list
 
 
 def last(input_list):
@@ -54,7 +55,7 @@ def last(input_list):
 
     """
 
-    return []
+    return input_list[-1]
 
 
 def init(input_list):
