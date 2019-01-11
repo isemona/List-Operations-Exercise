@@ -30,8 +30,12 @@ def custom_len(input_list):
         8
 
     """
+    total = 0
+    for items in input_list:
+        total += 1 
 
-    return 0
+    return total
+
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -44,6 +48,7 @@ def custom_len(input_list):
 
 
 def custom_append(input_list, value):
+    input_list[custom_len(input_list):custom_len(input_list)] = [value]
     """Add the value to the end of the list.
 
     The function custom_append(input_list, value) should have the same
@@ -55,11 +60,11 @@ def custom_append(input_list, value):
         >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
         >>> custom_append(notes, 'Re')
         >>> notes == ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do', 'Re']
-        True
+        True      
 
     """
 
-    pass
+    #input_list[custom_len(input_list):custom_len(input_list)] = [value]
 
 
 def custom_extend(input_list, second_list):
@@ -77,8 +82,9 @@ def custom_extend(input_list, second_list):
         True
 
     """
-
-    pass
+       
+    input_list[custom_len(input_list):custom_len(input_list)] = second_list
+    
 
 
 def custom_insert(input_list, index, value):
@@ -96,7 +102,7 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    input_list[index:index] = [value]
 
 
 def custom_remove(input_list, value):
