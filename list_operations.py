@@ -41,8 +41,7 @@ def tail(input_list):
 
     """
 
-    del input_list[0]
-    return input_list
+    return input_list[1:]
 
 
 def last(input_list):
